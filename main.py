@@ -5,12 +5,12 @@ import pandas as pd
 
 app = FastAPI()
 
-BASE_DIR = os.path.dirname(__file__)
-modelo = joblib.load(os.path.join(BASE_DIR, "modelo_asistencias.pkl"))
-
 @app.get("/")
 def home():
-    return {"status": "API funcionando"}
+    return {"status": "API funcionando 🚀"}
+
+BASE_DIR = os.path.dirname(__file__)
+modelo = joblib.load(os.path.join(BASE_DIR, "modelo_asistencias.pkl"))
 
 @app.post("/predict")
 def predict(data: dict):
