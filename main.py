@@ -33,10 +33,6 @@ def predict(data: dict):
         "tarde": round(float(prob[1])*100,2),
         "falta": round(float(prob[2])*100,2)
     }
-        "presente": float(prob[0]),
-        "tarde": float(prob[1]),
-        "falta": float(prob[2])
-    }
 
 @app.post("/predict-multiple")
 def predict_multiple(data: dict):
